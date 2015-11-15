@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Menus</string>
+    <string-array name="items">
+        <item>Option 1</item>
+        <item>Option 2</item>
+    </string-array>
+</resources>

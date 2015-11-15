@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="button_text1">Launch fragment one</string>
+    <string name="button_text2">Launch fragment two</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="color_is">My color is</string>
+    <string name="title_activity_activity_b">ActivityB</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty_frame_text">No selection is made so far !</string>
+</resources>

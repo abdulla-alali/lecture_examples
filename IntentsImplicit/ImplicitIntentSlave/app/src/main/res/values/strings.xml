@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ImplicitIntentSlave</string>
+    <string name="dangerous_activity_text">DANGEROUS ACTIVITY !</string>
+</resources>

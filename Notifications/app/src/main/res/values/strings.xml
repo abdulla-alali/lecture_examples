@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Notifications</string>
+    <string name="launch_toast">Toast</string>
+    <string name="custom_toast">Custom toast</string>
+    <string name="notif">Notification</string>
+    <string name="prog_notif">Progress Notification</string>
+</resources>

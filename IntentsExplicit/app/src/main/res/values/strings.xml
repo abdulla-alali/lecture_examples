@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExplicitIntent</string>
+    <string name="result">Result will show here</string>
+    <string name="launch">Launch ActivityTwo (Explicit)</string>
+    <string name="title_activity_activity_two">ActivityTwo</string>
+    <string name="finish">Finish</string>
+</resources>

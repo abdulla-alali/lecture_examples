@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TossingCoin</string>
+    <string name="buttonToss">Toss!</string>
+    <string name="val1">Head</string>
+    <string name="val2">Tail</string>
+    <string name="buttonRepeat">Repeat</string>
+    <string name="buttonExit">Exit</string>
+
+</resources>

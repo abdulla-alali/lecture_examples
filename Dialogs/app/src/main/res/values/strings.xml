@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dialogs</string>
+    <string name="progres">Progress Dialog Determinate</string>
+    <string name="progress_ind">Progress dialog indeterminate</string>
+    <string name="datepickerdialog">DatePickerDialog</string>
+    <string name="alert_dialog">Alert Dialog</string>
+    <string name="time_picker_dialog">Time picker dialog</string>
+
+</resources>
