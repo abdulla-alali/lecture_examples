@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class ViewPost extends Activity {
+public class ViewPost extends AppCompatActivity {
     private Bitmap mBitmap;
     private ImageView mImageView;
     private int mDelay = 5000;

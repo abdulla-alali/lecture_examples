@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class HandlerRunnables extends Activity {
+public class HandlerRunnables extends AppCompatActivity {
 
     private ImageView mImageView;
     private ProgressBar mProgressBar;

@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class AsyncTaskExample extends Activity {
+public class AsyncTaskExample extends AppCompatActivity {
 
     private final static String TAG = "ThreadingAsyncTask";
 

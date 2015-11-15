@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -16,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class HandlerMessages extends Activity {
+public class HandlerMessages extends AppCompatActivity {
     private final static int SET_PROGRESS_BAR_VISIBILITY = 0;
     private final static int PROGRESS_UPDATE = 1;
     private final static int SET_BITMAP = 2;
