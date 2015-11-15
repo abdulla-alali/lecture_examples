@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="qa.edu.qu.cse.cmps497.threading" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NoThreading" >
+        </activity>
+        <activity android:name=".SimpleThreading" >
+        </activity>
+        <activity android:name=".RunOnUi" >
+        </activity>
+        <activity android:name=".ViewPost" >
+        </activity>
+        <activity android:name=".AsyncTaskExample" >
+        </activity>
+        <activity android:name=".HandlerRunnables" >
+        </activity>
+        <activity android:name=".HandlerMessages" >
+        </activity>
+    </application>
+
+</manifest>

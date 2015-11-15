@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Threading</string>
+    <string name="load_icon_string">Load Icon</string>
+    <string name="other_button_string">Other Button</string>
+    <string name="image_desc_string">Image</string>
+    <string name="no_threading">No Threading</string>
+    <string name="simple_fix">Simple Fix</string>
+    <string name="run_on_ui_thread">RunOnUiThread</string>
+    <string name="view_post">View Post</string>
+    <string name="asynctask">AsyncTask</string>
+    <string name="handler_messages">Handler messages</string>
+    <string name="handler_runnables">Handler runnables</string>
+</resources>
