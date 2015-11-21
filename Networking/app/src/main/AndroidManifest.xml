@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="qa.edu.qu.cse.cmps497.networking" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NetworkingURLActivity"
+            android:label="@string/networking_url" >
+        </activity>
+        <activity
+            android:name=".NetworkingSocketActivity"
+            android:label="@string/networking_sockets" >
+        </activity>
+        <activity
+            android:name=".NetworkingJSONActivity"
+            android:label="@string/networking_json" >
+        </activity>
+        <activity android:name=".NetworkingXMLActivity"
+            android:label="@string/networking_xml">
+        </activity>
+    </application>
+
+</manifest>

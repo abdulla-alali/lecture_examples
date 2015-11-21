@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Networking</string>
+    <string name="networking_url">Networking URL</string>
+    <string name="load_data_string">Load Data</string>
+    <string name="networking_sockets">Networking sockets</string>
+    <string name="networking_json">Networking JSON</string>
+    <string name="please_wait">Please wait ...</string>
+    <string name="networking_xml">Networking XML</string>
+    <string name="error">Error</string>
+    <string name="xml_error">Something went wrong with the XML extractor</string>
+    <string name="ok">OK</string>
+</resources>
