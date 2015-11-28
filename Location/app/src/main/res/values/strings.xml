@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Location</string>
+    <string name="locationmanager">LocationManager</string>
+    <string name="location_services">Location services</string>
+    <string name="no_init_readings">No Initial Reading Available</string>
+    <string name="accuracy">Accuracy:</string>
+    <string name="time">Time:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="play_services_not_installed">Google play services are not installed or not updated</string>
+</resources>
