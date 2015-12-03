@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Services</string>
+    <string name="local_logging_service">Local logging service</string>
+    <string name="music_player_service">Music player service</string>
+    <string name="play_music">Play music</string>
+    <string name="stop_music">Stop music</string>
+    <string name="music_notif_title">Music playing</string>
+    <string name="music_notif_text">Click to access music player</string>
+    <string name="binding_services">Binding to services</string>
+    <string name="get_random_number">Get Random Number</string>
+    <string name="no_number_generated">No number is generated</string>
+    <string name="binder_bound">Binder bound</string>
+    <string name="messenger_bound">Messenger bound</string>
+    <string name="aidl_bound">AIDL bound</string>
+    <string name="obtained_rannum">"Obtained random number: "</string>
+    <string name="generate_log_messages">Generate Log Messages</string>
+    <string name="your_id">Your ID</string>
+    <string name="get_new_id">Get new ID</string>
+</resources>
