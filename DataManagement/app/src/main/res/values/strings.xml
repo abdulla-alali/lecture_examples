@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Data Management</string>
+    <string name="shared_prefs">Shared Preferences</string>
+    <string name="play_string">Play</string>
+    <string name="highscore_string">&quot;HighScore: &quot;</string>
+    <string name="reset_string">Reset</string>
+    <string name="prefs_fragment">Preference Fragment</string>
+    <string name="file_internal">File Internal</string>
+    <string name="android_painter">Android Painter</string>
+    <string name="file_external">File External</string>
+    <string name="fix">Fix</string>
+    <string name="sql_database">SQL Database</string>
+</resources>
