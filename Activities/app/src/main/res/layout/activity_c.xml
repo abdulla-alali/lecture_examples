@@ -86,7 +86,7 @@ limitations under the License.
 
 <ScrollView
      android:layout_width="match_parent"
-     android:layout_height="160dp">
+     android:layout_height="150dp">
     <TextView
         android:id="@+id/status_view_c"
         android:layout_width="match_parent"
