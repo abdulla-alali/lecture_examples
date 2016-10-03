@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ImplicitIntentSlave</string>
     <string name="dangerous_activity_text">DANGEROUS ACTIVITY !</string>
+    <string name="dangerous_perm_description">wipe away your data and do bad things</string>
 </resources>
