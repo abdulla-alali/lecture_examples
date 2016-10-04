@@ -12,18 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class FragmentTwo extends Fragment {
-    private static final String COLOR = "color";
+    public static final String COLOR = "color";
 
     private int mColor;
-
-    public static FragmentTwo newInstance(int color) {
-        FragmentTwo fragment = new FragmentTwo();
-        Bundle args = new Bundle();
-        args.putInt(COLOR, color);
-        //Notice the set arguments instead of putExtras !
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

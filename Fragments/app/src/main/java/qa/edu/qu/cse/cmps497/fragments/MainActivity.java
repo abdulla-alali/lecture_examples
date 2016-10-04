@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends Activity implements FragmentOne.OnFragmentInteractionListener {
 
@@ -25,7 +24,6 @@ public class MainActivity extends Activity implements FragmentOne.OnFragmentInte
 
     @Override
     public void onButtonPressed(View v) {
-        boolean dualPane = getResources().getBoolean(R.bool.two_pane);
         switch (v.getId()) {
             case R.id.button:
                 displayDetails(1);
@@ -71,15 +69,25 @@ public class MainActivity extends Activity implements FragmentOne.OnFragmentInte
 
     private void startFragment(int i) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        FragmentTwo fragment = new FragmentTwo();
+        Bundle args = new Bundle();
+
         switch (i) {
             case 1:
-                //Color is set as a Buncle and pushed using setArguments()
-                ft.replace(R.id.fragment2, FragmentTwo.newInstance(getResources().getColor(R.color.colorAccent)));
+                //Color is set as a Bundle and pushed using setArguments()
+                args.putInt(FragmentTwo.COLOR, getResources().getColor(R.color.colorAccent));
                 break;
             case 2:
-                ft.replace(R.id.fragment2, FragmentTwo.newInstance(getResources().getColor(R.color.colorPrimary)));
+                args.putInt(FragmentTwo.COLOR, getResources().getColor(R.color.colorPrimary));
                 break;
         }
+
+        //Notice the set arguments instead of putExtras !
+        fragment.setArguments(args);
+
+        ft.replace(R.id.fragment2, fragment);
+
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
     }

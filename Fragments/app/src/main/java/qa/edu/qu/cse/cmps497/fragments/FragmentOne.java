@@ -16,12 +16,6 @@ public class FragmentOne extends Fragment implements View.OnClickListener {
 
     private OnFragmentInteractionListener mListener;
 
-
-    public static FragmentOne newInstance(String param1, String param2) {
-        FragmentOne fragment = new FragmentOne();
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +36,7 @@ public class FragmentOne extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(Context activity) {
         super.onAttach(activity);
         try {
             mListener = (OnFragmentInteractionListener) getActivity();
@@ -73,8 +67,7 @@ public class FragmentOne extends Fragment implements View.OnClickListener {
      * activity.
      */
     public interface OnFragmentInteractionListener {
-        //public void onFragmentInteraction(Uri uri);
-        public void onButtonPressed(View v);
+        void onButtonPressed(View v);
     }
 
 }

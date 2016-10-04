@@ -1,11 +1,8 @@
 package qa.edu.qu.cse.cmps497.fragments;
 
-import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Activity;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class ActivityB extends Activity {
 
@@ -27,8 +24,13 @@ public class ActivityB extends Activity {
 
         if (savedInstanceState == null) {
             // During initial setup, plug in FragmentTwo
-            FragmentTwo fragmentTwo = FragmentTwo.newInstance(color);
-            getFragmentManager().beginTransaction().add(R.id.frame_layout, fragmentTwo).commit();
+            FragmentTwo fragment = new FragmentTwo();
+            Bundle args = new Bundle();
+            args.putInt(FragmentTwo.COLOR, color);
+            //Notice the set arguments instead of putExtras !
+            fragment.setArguments(args);
+
+            getFragmentManager().beginTransaction().add(R.id.frame_layout, fragment).commit();
         }
 
     }
