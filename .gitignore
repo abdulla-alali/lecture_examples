@@ -7,3 +7,4 @@
 */import-summary.txt
 build/
 *.iml
+*/*/.idea
