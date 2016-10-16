@@ -36,13 +36,10 @@ public class ListAdapter extends ArrayAdapter<Item> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View v = convertView;
-
-        if (v == null) {
+        if (convertView == null) {
             Log.i("TAG", "View is null");
-            LayoutInflater vi;
-            vi = LayoutInflater.from(getContext());
-            v = vi.inflate(R.layout.listview_row_item_custom, parent, false);
+            LayoutInflater vi = LayoutInflater.from(getContext());
+            convertView = vi.inflate(R.layout.listview_row_item_custom, parent, false);
         }
 
         //getItem() is a super class method that retrieves the item that corresponds to this row
@@ -50,8 +47,8 @@ public class ListAdapter extends ArrayAdapter<Item> {
         Item p = getItem(position);
 
         if (p != null) {
-            TextView tt1 = (TextView) v.findViewById(R.id.number);
-            TextView tt2 = (TextView) v.findViewById(R.id.label);
+            TextView tt1 = (TextView) convertView.findViewById(R.id.number);
+            TextView tt2 = (TextView) convertView.findViewById(R.id.label);
 
 
             tt1.setText(p.getNumber() + "");
@@ -61,7 +58,7 @@ public class ListAdapter extends ArrayAdapter<Item> {
 
         }
 
-        return v;
+        return convertView;
     }
 
 }
