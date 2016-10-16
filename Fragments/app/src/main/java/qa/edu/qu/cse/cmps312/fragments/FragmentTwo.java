@@ -1,10 +1,7 @@
 package qa.edu.qu.cse.cmps312.fragments;
 
-import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,11 +38,5 @@ public class FragmentTwo extends Fragment {
         //must return the inflated layout of the fragment
         return mainView;
     }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-    }
-
 
 }

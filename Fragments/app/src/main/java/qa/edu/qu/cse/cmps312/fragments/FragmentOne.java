@@ -1,8 +1,5 @@
 package qa.edu.qu.cse.cmps312.fragments;
 
-import android.app.Activity;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.util.Log;
@@ -11,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-
 public class FragmentOne extends Fragment implements View.OnClickListener {
 
     private OnFragmentInteractionListener mListener;
@@ -19,6 +15,16 @@ public class FragmentOne extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (mListener==null) {
+            try {
+                mListener = (OnFragmentInteractionListener) getActivity();
+            } catch (ClassCastException e) {
+                throw new ClassCastException(mListener.toString()
+                        + " must implement OnFragmentInteractionListener");
+            }
+        }
+
     }
 
     @Override
@@ -36,20 +42,9 @@ public class FragmentOne extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onAttach(Context activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnFragmentInteractionListener) getActivity();
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
+    public void onDestroy() {
+        super.onDestroy();
+        mListener=null;
     }
 
     @Override
@@ -57,7 +52,6 @@ public class FragmentOne extends Fragment implements View.OnClickListener {
         if (mListener != null) {
             mListener.onButtonPressed(v);
         }
-
     }
 
     /**
