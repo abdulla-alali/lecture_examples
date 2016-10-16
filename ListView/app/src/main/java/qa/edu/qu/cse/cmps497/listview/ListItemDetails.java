@@ -11,7 +11,7 @@ public class ListItemDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_item_details);
 
-        String label = getIntent().getExtras().getString("label");
+        String label = getIntent().getExtras().getString(MainActivity.LABEL);
 
         TextView textView = (TextView)findViewById(R.id.product_label);
         textView.setText(label);

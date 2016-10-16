@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     ListView mListView;
 
+    public final static String LABEL = "label";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //getApplicationContext() is equivalent to Text
                 Intent intent = new Intent(getApplicationContext(), ListItemDetails.class);
-                intent.putExtra("label", adobeProducts[position]);
+                intent.putExtra(LABEL, adobeProducts[position]);
                 startActivity(intent);
             }
         });
