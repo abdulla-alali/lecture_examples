@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "qa.edu.qu.cse.cmps497.fragments"
+        applicationId "qa.edu.qu.cse.cmps312.fragments"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1

@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.fragments;
+package qa.edu.qu.cse.cmps312.fragments;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

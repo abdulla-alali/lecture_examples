@@ -8,7 +8,7 @@
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:id="@+id/fragment1"
-        android:name="qa.edu.qu.cse.cmps497.fragments.FragmentOne"
+        android:name="qa.edu.qu.cse.cmps312.fragments.FragmentOne"
         tools:layout="@layout/fragment_one" />
     <FrameLayout
         android:layout_width="match_parent"
