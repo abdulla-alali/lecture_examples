@@ -149,7 +149,7 @@ public class MainActivity extends Activity {
 
                     //the user refused to grant us permission.
                     //either request again, or give up
-                    Log.i(TAG, "I don't have permission to call");
+                    Log.i(TAG, "I don't have permission to launch second activity");
                     dangerousLaunchClicked(null);
 
                 }
