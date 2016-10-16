@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_row_item, R.id.label, adobeProducts));
 
         //Advance: custom rows via a custom adapter
-        //If you uncomment this block, comment out the setAdapter line above (line 31)
+        //If you uncomment this block, comment out the setAdapter line above (line 33)
         /*ArrayList<Item> myItems = new ArrayList<Item>();
         for (int i=0; i<adobeProducts.length; i++) {
             myItems.add(new Item(i+1, adobeProducts[i]));
