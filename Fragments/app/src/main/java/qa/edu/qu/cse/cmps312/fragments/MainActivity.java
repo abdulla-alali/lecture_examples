@@ -86,7 +86,7 @@ public class MainActivity extends Activity implements FragmentOne.OnFragmentInte
         //Notice the set arguments instead of putExtras !
         fragment.setArguments(args);
 
-        ft.replace(R.id.fragment2, fragment);
+        ft.add(R.id.fragment2, fragment);
 
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
