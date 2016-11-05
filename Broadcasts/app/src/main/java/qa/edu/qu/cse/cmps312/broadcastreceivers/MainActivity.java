@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.broadcastreceivers;
+package qa.edu.qu.cse.cmps312.broadcastreceivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
     BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction()==Intent.ACTION_AIRPLANE_MODE_CHANGED)
+            if (intent.getAction().equals(Intent.ACTION_AIRPLANE_MODE_CHANGED))
                 mTextView.setText(getResources().getString(R.string.airplane_mode) + " " + intent.getBooleanExtra("state",false));
-            else if (intent.getAction()==MY_ACTION)
+            else if (intent.getAction().equals(MY_ACTION))
                 Toast.makeText(MainActivity.this, "My Action", Toast.LENGTH_LONG).show();
         }
     };

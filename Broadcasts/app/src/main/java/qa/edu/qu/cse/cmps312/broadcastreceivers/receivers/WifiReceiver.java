@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.broadcastreceivers.receivers;
+package qa.edu.qu.cse.cmps312.broadcastreceivers.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
