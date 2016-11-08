@@ -18,11 +18,11 @@
 
         <!-- example of statically registered receiver -->
         <receiver
-            android:name=".receivers.WifiReceiver"
+            android:name=".receivers.ConnectivityReceiver"
             android:enabled="true"
             android:exported="true" >
             <intent-filter>
-                <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
         </receiver>
     </application>
