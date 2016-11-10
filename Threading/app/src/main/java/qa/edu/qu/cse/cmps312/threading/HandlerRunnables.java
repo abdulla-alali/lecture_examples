@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.threading;
+package qa.edu.qu.cse.cmps312.threading;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
