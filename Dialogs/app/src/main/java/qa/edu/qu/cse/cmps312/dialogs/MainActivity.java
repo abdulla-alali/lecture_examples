@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.dialogs;
+package qa.edu.qu.cse.cmps312.dialogs;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void progressClicked(View view) {
         final ProgressDialog progress=new ProgressDialog(this);
-        progress.setMessage("Downloading Music");
+        progress.setMessage(getResources().getString(R.string.music_download));
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progress.setIndeterminate(false);
         progress.setProgress(0);
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void progressIndeterminateClicked(View view) {
         final ProgressDialog progress=new ProgressDialog(this);
-        progress.setMessage("Downloading Music");
+        progress.setMessage(getString(R.string.music_download));
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progress.setIndeterminate(true);
         progress.show();
@@ -75,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void alertDialogClicked(View view) {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("AlertDialog");
-        alertDialog.setMessage("Are you sure?");
-        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        alertDialog.setTitle(R.string.alert_title);
+        alertDialog.setMessage(R.string.sure);
+        alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Log.i(TAG, "OK is clicked");
@@ -112,5 +113,28 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 22, 30, false);
         dialog.show();
+    }
+
+    public void customAlertDialogClicked(View view) {
+
+        //Let's extract a layout view
+        View v = LayoutInflater.from(this).inflate(R.layout.custom_alert_dialog, null);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle(R.string.alert_title);
+        alertDialog.setView(v);
+        alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.i(TAG, "OK is clicked");
+            }
+        });
+        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.i(TAG, "Cancel is clicked");
+            }
+        });
+        alertDialog.create().show();
     }
 }

@@ -5,5 +5,11 @@
     <string name="datepickerdialog">DatePickerDialog</string>
     <string name="alert_dialog">Alert Dialog</string>
     <string name="time_picker_dialog">Time picker dialog</string>
+    <string name="sure">Are you sure?</string>
+    <string name="alert_title">AlertDialog</string>
+    <string name="ok">OK</string>
+    <string name="music_download">Downloading Music</string>
+    <string name="custom_alertdialog">Custom AlertDialog</string>
+    <string name="my_custom_view">My custom view !!</string>
 
 </resources>
