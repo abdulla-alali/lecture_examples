@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.notifications;
+package qa.edu.qu.cse.cmps312.notifications;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -12,6 +12,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,9 +27,10 @@ public class MainActivity extends AppCompatActivity {
     public void launchNotification(View view) {
 
         final NotificationManager nManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        final Notification.Builder mBuilder = new Notification.Builder(this).setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("TITLE")
-                .setContentText("This is the text");
+        final Notification.Builder mBuilder = new Notification.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(getString(R.string.notif_title))
+                .setContentText(getString(R.string.notif_text));
 
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
@@ -44,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
     public void customToastClicked(View view) {
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.toast_layout,
-                (ViewGroup) findViewById(R.id.toast_layout_root));
+               null, false);
 
         TextView text = (TextView) layout.findViewById(R.id.text);
-        text.setText("This is a custom toast");
+        text.setText(R.string.custom_toast_text);
 
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.BOTTOM, 0, 100);
@@ -66,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
         final int max=100;
         final NotificationManager nManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         final Notification.Builder mBuilder = new Notification.Builder(this).setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("TITLE")
-                .setContentText("This is the text");
+                .setContentTitle(getResources().getString(R.string.notif_title))
+                .setContentText(getResources().getString(R.string.notif_text));
 
         //set the progress of the progressBar inside the notification
         //Here, max is 100, initial value is 20, and is a determinate progressbar

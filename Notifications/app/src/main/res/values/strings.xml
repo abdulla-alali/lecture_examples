@@ -4,4 +4,7 @@
     <string name="custom_toast">Custom toast</string>
     <string name="notif">Notification</string>
     <string name="prog_notif">Progress Notification</string>
+    <string name="notif_title">TITLE</string>
+    <string name="notif_text">This is the text</string>
+    <string name="custom_toast_text">This is a custom toast</string>
 </resources>
