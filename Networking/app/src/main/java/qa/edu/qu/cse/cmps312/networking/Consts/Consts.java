@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.networking.Consts;
+package qa.edu.qu.cse.cmps312.networking.Consts;
 
 public class Consts {
     // Get your user name at http://www.geonames.org/login

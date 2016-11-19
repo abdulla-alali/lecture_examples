@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.networking;
+package qa.edu.qu.cse.cmps312.networking;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.networking;
+package qa.edu.qu.cse.cmps312.networking;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -18,7 +18,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import qa.edu.qu.cse.cmps497.networking.Consts.Consts;
+import qa.edu.qu.cse.cmps312.networking.Consts.Consts;
 
 public class NetworkingXMLActivity extends AppCompatActivity {
 
