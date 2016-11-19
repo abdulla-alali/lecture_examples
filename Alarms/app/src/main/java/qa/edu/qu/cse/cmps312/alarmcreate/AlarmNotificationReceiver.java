@@ -1,4 +1,4 @@
-package course.examples.alarms.alarmcreate;
+package qa.edu.qu.cse.cmps312.alarmcreate;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -27,7 +27,7 @@ public class AlarmNotificationReceiver extends BroadcastReceiver {
 
 	// Notification Sound and Vibration on Arrival
 	private final Uri soundURI = Uri
-			.parse("android.resource://course.examples.alarms.alarmcreate/"
+			.parse("android.resource://qa.edu.qu.cse.cmps312.alarmcreate/"
 					+ R.raw.alarm_rooster);
 	private final long[] mVibratePattern = { 0, 200, 200, 300 };
 

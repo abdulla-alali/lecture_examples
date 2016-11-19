@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "course.examples.alarms.alarmcreate"
+        applicationId "qa.edu.qu.cse.cmps312.alarmcreate"
         minSdkVersion 16
-        targetSdkVersion 19
+        //changing targetSdk to > 18 will change behavior of AlarmManager.setRepeating()!
+        //See documentation of setRepeating() for details.
+        targetSdkVersion 18
     }
 
     buildTypes {

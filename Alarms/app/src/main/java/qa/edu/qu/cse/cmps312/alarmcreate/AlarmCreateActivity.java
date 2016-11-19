@@ -1,13 +1,11 @@
-package course.examples.alarms.alarmcreate;
+package qa.edu.qu.cse.cmps312.alarmcreate;
 
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -38,7 +36,8 @@ public class AlarmCreateActivity extends Activity {
 
 		// Create an PendingIntent that holds the NotificationReceiverIntent
 		mNotificationReceiverPendingIntent = PendingIntent.getBroadcast(
-				AlarmCreateActivity.this, 0, mNotificationReceiverIntent, 0);
+				AlarmCreateActivity.this, 0, mNotificationReceiverIntent,
+				PendingIntent.FLAG_UPDATE_CURRENT);
 
 		// Create an Intent to broadcast to the AlarmLoggerReceiver
 		mLoggerReceiverIntent = new Intent(AlarmCreateActivity.this,
@@ -46,7 +45,8 @@ public class AlarmCreateActivity extends Activity {
 
 		// Create PendingIntent that holds the mLoggerReceiverPendingIntent
 		mLoggerReceiverPendingIntent = PendingIntent.getBroadcast(
-				AlarmCreateActivity.this, 0, mLoggerReceiverIntent, 0);
+				AlarmCreateActivity.this, 1, mLoggerReceiverIntent,
+				PendingIntent.FLAG_UPDATE_CURRENT);
 
 		// Set up single alarm Button
 		// fire up the alarm once

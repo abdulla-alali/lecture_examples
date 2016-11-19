@@ -1,4 +1,4 @@
-package course.examples.alarms.alarmcreate;
+package qa.edu.qu.cse.cmps312.alarmcreate;
 
 import java.text.DateFormat;
 import java.util.Date;
