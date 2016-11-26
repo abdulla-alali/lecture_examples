@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.startedboundservice;
+package qa.edu.qu.cse.cmps312.startedboundservice;
 
 import android.app.ProgressDialog;
 import android.content.ComponentName;

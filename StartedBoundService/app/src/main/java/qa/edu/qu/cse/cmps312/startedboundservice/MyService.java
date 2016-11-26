@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.startedboundservice;
+package qa.edu.qu.cse.cmps312.startedboundservice;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -61,7 +61,7 @@ public class MyService extends Service {
                 mProgress = 0;
                 while (mProgress<=max && !Thread.currentThread().isInterrupted()) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(500);
                         mNotif.setProgress(max, mProgress, false);
                         notifManager.notify(NOTIF_ID, mNotif.build());
                         mProgress+=20;
@@ -95,7 +95,8 @@ public class MyService extends Service {
 
     @Override
     public boolean onUnbind(Intent intent) {
-        Log.d(TAG, "Service is being unbound from server side");
+        Log.d(TAG, "Unbound from server side");
+        mClientMessenger = null;
         return super.onUnbind(intent);
     }
 

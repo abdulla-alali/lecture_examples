@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="qa.edu.qu.cse.cmps497.startedboundservice">
+    package="qa.edu.qu.cse.cmps312.startedboundservice">
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,7 @@
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"/>
     </application>
 
 </manifest>
