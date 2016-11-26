@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Multimedia</string>
+    <string name="audio_manager">Audio Manager</string>
+
+    <string name="down_string">Down</string>
+    <string name="up_string">Up</string>
+    <string name="play_string">Play</string>
+
+    <string name="ringtone_string">Ringtone</string>
+    <string name="notification_string">Notification</string>
+    <string name="alarm_string">Alarm</string>
+    <string name="ringtone_manager">Ringtone Manager</string>
+    <string name="video_play">Video play</string>
+    <string name="audio_recording">Audio Recording</string>
+
+    <string name="stop_recording_string">Stop Recording</string>
+    <string name="start_recording_string">Start Recording</string>
+    <string name="start_playback_string">Start Playback</string>
+    <string name="stop_playback_string">Stop Playback</string>
+    <string name="error">Error</string>
+    <string name="must_accept_permission">You must accept this permission so I can record your voice</string>
+    <string name="ok">OK</string>
+    <string name="cant_record_audio">I cann\'t record your audio. sorry</string>
+    <string name="camera">Camera</string>
+</resources>
