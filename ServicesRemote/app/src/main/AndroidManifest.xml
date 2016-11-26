@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="qa.edu.qu.cse.cmps497.servicesremote">
+    package="qa.edu.qu.cse.cmps312.servicesremote">
 
-    <permission android:name="qa.edu.qu.cse.cmps497.servicesremote.PERMISSION" />
+    <permission android:name="qa.edu.qu.cse.cmps312.servicesremote.PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -11,21 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".MessengerRemoteService"
+            android:name="qa.edu.qu.cse.cmps312.servicesremote.MessengerRemoteService"
             android:enabled="true"
             android:exported="true"
-            android:permission="qa.edu.qu.cse.cmps497.servicesremote.PERMISSION">
+            android:permission="qa.edu.qu.cse.cmps312.servicesremote.PERMISSION">
             <intent-filter>
-                <action android:name="qa.edu.qu.cse.cmps497.servicesremote.messenger_service_action" />
+                <action android:name="qa.edu.qu.cse.cmps312.servicesremote.messenger_service_action" />
             </intent-filter>
         </service>
         <service
-            android:name=".AIDLRemoteService"
+            android:name="qa.edu.qu.cse.cmps312.servicesremote.AIDLRemoteService"
             android:enabled="true"
             android:exported="true"
-            android:permission="qa.edu.qu.cse.cmps497.servicesremote.PERMISSION">
+            android:permission="qa.edu.qu.cse.cmps312.servicesremote.PERMISSION">
             <intent-filter>
-                <action android:name="qa.edu.qu.cse.cmps497.servicesremote.aidl_service_action" />
+                <action android:name="qa.edu.qu.cse.cmps312.servicesremote.aidl_service_action" />
             </intent-filter>
         </service>
     </application>

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "qa.edu.qu.cse.cmps497.servicesremote"
+        applicationId "qa.edu.qu.cse.cmps312.servicesremote"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

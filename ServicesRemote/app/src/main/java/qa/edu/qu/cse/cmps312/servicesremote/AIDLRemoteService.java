@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.servicesremote;
+package qa.edu.qu.cse.cmps312.servicesremote;
 
 import android.app.Service;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
-import qa.edu.qu.cse.cmps497.services.aidl.KeyGenerator;
+import qa.edu.qu.cse.cmps312.services.aidl.KeyGenerator;
 
 public class AIDLRemoteService extends Service {
 
@@ -21,7 +21,7 @@ public class AIDLRemoteService extends Service {
     // Implement the Stub for this Object
     private final KeyGenerator.Stub mBinder = new KeyGenerator.Stub() {
 
-        // Implement the remote method
+        // Implement the remote AIDL method
         public String getKey() {
 
             UUID id;

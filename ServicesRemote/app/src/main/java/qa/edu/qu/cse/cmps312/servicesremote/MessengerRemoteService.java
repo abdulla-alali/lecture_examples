@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.servicesremote;
+package qa.edu.qu.cse.cmps312.servicesremote;
 
 import android.app.Service;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class MessengerRemoteService extends Service {
 
-    private final static String MESSAGE_KEY = "qa.edu.qu.cse.cmps497.servicesremotemessenger.MESSAGE";
+    private final static String MESSAGE_KEY = "qa.edu.qu.cse.cmps312.servicesremotemessenger.MESSAGE";
     private final static int LOG_OP = 1;
 
     private static final String TAG = "LoggingService";
