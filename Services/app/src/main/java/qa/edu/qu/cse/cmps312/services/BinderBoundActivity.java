@@ -1,18 +1,16 @@
-package qa.edu.qu.cse.cmps497.services;
+package qa.edu.qu.cse.cmps312.services;
 
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.os.Binder;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import qa.edu.qu.cse.cmps497.services.services.BinderService;
+import qa.edu.qu.cse.cmps312.services.services.BinderService;
 
 public class BinderBoundActivity extends AppCompatActivity {
 

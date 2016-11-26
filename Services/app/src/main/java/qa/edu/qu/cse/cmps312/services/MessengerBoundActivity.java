@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.services;
+package qa.edu.qu.cse.cmps312.services;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -16,7 +16,7 @@ import android.widget.Button;
 
 public class MessengerBoundActivity extends AppCompatActivity {
 
-    private final static String MESSAGE_KEY = "qa.edu.qu.cse.cmps497.servicesremotemessenger.MESSAGE";
+    private final static String MESSAGE_KEY = "qa.edu.qu.cse.cmps312.servicesremotemessenger.MESSAGE";
     private final static int LOG_OP = 1;
 
     private final static String TAG = "LoggingServiceClient";
@@ -56,9 +56,9 @@ public class MessengerBoundActivity extends AppCompatActivity {
         setContentView(R.layout.activity_messenger_bound);
 
         mLoggingServiceIntent = new Intent(
-                "qa.edu.qu.cse.cmps497.servicesremote.messenger_service_action");
+                "qa.edu.qu.cse.cmps312.servicesremote.messenger_service_action");
 
-        mLoggingServiceIntent.setPackage("qa.edu.qu.cse.cmps497.servicesremote");
+        mLoggingServiceIntent.setPackage("qa.edu.qu.cse.cmps312.servicesremote");
 
         final Button buttonStart = (Button) findViewById(R.id.buttonStart);
         buttonStart.setOnClickListener(new View.OnClickListener() {

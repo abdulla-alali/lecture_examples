@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="qa.edu.qu.cse.cmps497.services">
+    package="qa.edu.qu.cse.cmps312.services">
 
-    <uses-permission android:name="qa.edu.qu.cse.cmps497.servicesremote.PERMISSION" />
+    <uses-permission android:name="qa.edu.qu.cse.cmps312.servicesremote.PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="qa.edu.qu.cse.cmps312.services.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,26 +19,26 @@
         </activity>
 
         <service
-            android:name=".services.LocalLoggingService"
+            android:name="qa.edu.qu.cse.cmps312.services.services.LocalLoggingService"
             android:exported="false" />
         <service
-            android:name=".services.MusicPlayerService"
+            android:name="qa.edu.qu.cse.cmps312.services.services.MusicPlayerService"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".MusicPlayerClient"
+            android:name="qa.edu.qu.cse.cmps312.services.MusicPlayerClient"
             android:launchMode="singleTask" />
-        <activity android:name=".BindingActivity" />
-        <activity android:name=".BinderBoundActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.services.BindingActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.services.BinderBoundActivity" />
 
         <service
-            android:name=".services.BinderService"
+            android:name="qa.edu.qu.cse.cmps312.services.services.BinderService"
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name=".MessengerBoundActivity" />
-        <activity android:name=".AIDLBoundActivity"></activity>
+        <activity android:name="qa.edu.qu.cse.cmps312.services.MessengerBoundActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.services.AIDLBoundActivity"></activity>
     </application>
 
 </manifest>

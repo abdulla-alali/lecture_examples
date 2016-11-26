@@ -1,13 +1,12 @@
-package qa.edu.qu.cse.cmps497.services.services;
+package qa.edu.qu.cse.cmps312.services.services;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.content.Context;
 import android.util.Log;
 
 public class LocalLoggingService extends IntentService {
 
-    public static String EXTRA_LOG = "qa.edu.qu.cse.cmps497.services.MESSAGE";
+    public static String EXTRA_LOG = "qa.edu.qu.cse.cmps312.services.MESSAGE";
     private static final String TAG = "LoggingService";
 
     public LocalLoggingService() {

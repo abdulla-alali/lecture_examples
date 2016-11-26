@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.services;
+package qa.edu.qu.cse.cmps312.services;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import qa.edu.qu.cse.cmps497.services.aidl.KeyGenerator;
+import qa.edu.qu.cse.cmps312.services.aidl.KeyGenerator;
 
 public class AIDLBoundActivity extends AppCompatActivity {
 
@@ -56,8 +56,8 @@ public class AIDLBoundActivity extends AppCompatActivity {
 
         if (!mIsBound) {
 
-            Intent intent = new Intent("qa.edu.qu.cse.cmps497.servicesremote.aidl_service_action");
-            intent.setPackage("qa.edu.qu.cse.cmps497.servicesremote");
+            Intent intent = new Intent("qa.edu.qu.cse.cmps312.servicesremote.aidl_service_action");
+            intent.setPackage("qa.edu.qu.cse.cmps312.servicesremote");
             bindService(intent, this.mConnection, Context.BIND_AUTO_CREATE);
 
         }

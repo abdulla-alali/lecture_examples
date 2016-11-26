@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.services.services;
+package qa.edu.qu.cse.cmps312.services.services;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -8,9 +8,8 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.IBinder;
 
-import qa.edu.qu.cse.cmps497.services.MainActivity;
-import qa.edu.qu.cse.cmps497.services.MusicPlayerClient;
-import qa.edu.qu.cse.cmps497.services.R;
+import qa.edu.qu.cse.cmps312.services.MusicPlayerClient;
+import qa.edu.qu.cse.cmps312.services.R;
 
 public class MusicPlayerService extends Service {
 
@@ -52,7 +51,7 @@ public class MusicPlayerService extends Service {
         final Intent notificationIntent = new Intent(getApplicationContext(),
                 MusicPlayerClient.class);
         final PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
-                notificationIntent, 0);
+                notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         final Notification notification = new Notification.Builder(
                 getApplicationContext())

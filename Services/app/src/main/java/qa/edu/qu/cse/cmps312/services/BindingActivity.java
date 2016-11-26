@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.services;
+package qa.edu.qu.cse.cmps312.services;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

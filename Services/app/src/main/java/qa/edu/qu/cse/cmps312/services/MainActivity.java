@@ -1,11 +1,11 @@
-package qa.edu.qu.cse.cmps497.services;
+package qa.edu.qu.cse.cmps312.services;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import qa.edu.qu.cse.cmps497.services.services.LocalLoggingService;
+import qa.edu.qu.cse.cmps312.services.services.LocalLoggingService;
 
 public class MainActivity extends AppCompatActivity {
 

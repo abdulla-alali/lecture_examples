@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.services.services;
+package qa.edu.qu.cse.cmps312.services.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -15,7 +15,8 @@ public class BinderService extends Service {
 
     /**
      * Class used for the client Binder.  Because we know this service always
-     * runs in the same process as its clients, we don't need to deal with IPC.
+     * runs in the same process as its clients, we don't need to deal with IPC
+     * (Inter process communication).
      */
     public class LocalBinder extends Binder {
         public BinderService getService() {
