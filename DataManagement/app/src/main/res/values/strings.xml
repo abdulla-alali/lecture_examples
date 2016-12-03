@@ -10,4 +10,12 @@
     <string name="file_external">File External</string>
     <string name="fix">Fix</string>
     <string name="sql_database">SQL Database</string>
+    <string name="user_name">User Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="uname_diag_title">Change User Name</string>
+    <string name="uname_diag_message">Enter Your User Name</string>
+    <string name="parental_lock">Parental lock</string>
+    <string name="plock_is_enabled">Parental lock is enabled</string>
+    <string name="plock_is_disabled">Parental lock is disabled</string>
 </resources>

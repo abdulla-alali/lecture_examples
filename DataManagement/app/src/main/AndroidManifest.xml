@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="qa.edu.qu.cse.cmps497.datamanagement">
+    package="qa.edu.qu.cse.cmps312.datamanagement">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -10,18 +10,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="qa.edu.qu.cse.cmps312.datamanagement.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SharedPreferencesActivity" />
-        <activity android:name=".PreferenceFragmentActivity" />
-        <activity android:name=".FileInternalActivity" />
-        <activity android:name=".FileExternalActivity" />
-        <activity android:name=".SQLDatabaseActivity"
+        <activity android:name="qa.edu.qu.cse.cmps312.datamanagement.SharedPreferencesActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.datamanagement.PreferenceFragmentActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.datamanagement.FileInternalActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.datamanagement.FileExternalActivity" />
+        <activity android:name="qa.edu.qu.cse.cmps312.datamanagement.SQLDatabaseActivity"
             android:label="@string/sql_database"/>
     </application>
 

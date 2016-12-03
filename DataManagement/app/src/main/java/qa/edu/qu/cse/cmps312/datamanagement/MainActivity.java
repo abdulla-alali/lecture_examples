@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.datamanagement;
+package qa.edu.qu.cse.cmps312.datamanagement;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.datamanagement;
+package qa.edu.qu.cse.cmps312.datamanagement;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import qa.edu.qu.cse.cmps497.datamanagement.SQLHelper.DatabaseOpenHelper;
+import qa.edu.qu.cse.cmps312.datamanagement.SQLHelper.DatabaseOpenHelper;
 
 public class SQLDatabaseActivity extends AppCompatActivity {
 
@@ -117,10 +117,12 @@ public class SQLDatabaseActivity extends AppCompatActivity {
 
     }
 
+
     // Close database
     @Override
     protected void onDestroy() {
 
+        //Delete database when we destroy activity
         mDbHelper.getWritableDatabase().close();
         mDbHelper.deleteDatabase();
 

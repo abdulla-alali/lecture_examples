@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.datamanagement.SQLHelper;
+package qa.edu.qu.cse.cmps312.datamanagement.SQLHelper;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

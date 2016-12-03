@@ -3,19 +3,19 @@
     android:key="prefscreen" >
 
     <EditTextPreference
-        android:dialogMessage="Enter Your User Name"
-        android:dialogTitle="Change User Name"
+        android:dialogMessage="@string/uname_diag_message"
+        android:dialogTitle="@string/uname_diag_title"
         android:key="uname"
-        android:negativeButtonText="Cancel"
-        android:positiveButtonText="Submit"
-        android:title="User Name"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/submit"
+        android:title="@string/user_name"
         >
     </EditTextPreference>
 
     <SwitchPreference
-        android:title="Parental lock"
-        android:summaryOn="Parental lock is enabled"
-        android:summaryOff="Parental lock is disabled"
+        android:title="@string/parental_lock"
+        android:summaryOn="@string/plock_is_enabled"
+        android:summaryOff="@string/plock_is_disabled"
         android:key="plock"
         />
 </PreferenceScreen>

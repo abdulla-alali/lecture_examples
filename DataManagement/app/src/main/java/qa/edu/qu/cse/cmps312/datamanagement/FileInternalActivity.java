@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.datamanagement;
+package qa.edu.qu.cse.cmps312.datamanagement;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +19,7 @@ import java.io.PrintWriter;
 public class FileInternalActivity extends AppCompatActivity {
 
     private final static String fileName = "TestFile.txt";
-    private String TAG = "InternalFileWriteReadActivity";
+    private String TAG = "InternalFileRWActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
