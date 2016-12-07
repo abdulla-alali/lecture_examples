@@ -1,4 +1,4 @@
-package course.examples.maps.earthquakemap;
+package qa.edu.qu.cse.cmps312.earthquakemap;
 
 public class EarthQuakeRec {
 	private double lat, lng, magnitude;

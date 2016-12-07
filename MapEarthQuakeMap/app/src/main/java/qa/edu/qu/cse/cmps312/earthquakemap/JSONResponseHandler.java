@@ -1,4 +1,4 @@
-package course.examples.maps.earthquakemap;
+package qa.edu.qu.cse.cmps312.earthquakemap;
 
 import java.util.ArrayList;
 import java.util.List;

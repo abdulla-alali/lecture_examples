@@ -1,4 +1,4 @@
-package course.examples.maps.earthquakemap;
+package qa.edu.qu.cse.cmps312.earthquakemap;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -21,6 +21,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
 
 public class MapsEarthquakeMapActivity extends Activity {
 

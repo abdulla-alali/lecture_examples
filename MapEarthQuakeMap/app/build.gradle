@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'Google Inc.:Google APIs:22'
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 'Google Inc.:Google APIs:23'
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "course.examples.maps.earthquakemap"
+        applicationId "qa.edu.qu.cse.cmps312.earthquakemap"
         minSdkVersion 21
-        targetSdkVersion 23
+        targetSdkVersion 25
     }
 
     buildTypes {
