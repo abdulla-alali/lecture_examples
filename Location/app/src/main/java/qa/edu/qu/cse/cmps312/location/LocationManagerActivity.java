@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.location;
+package qa.edu.qu.cse.cmps312.location;
 
 import java.text.SimpleDateFormat;
 import java.util.List;

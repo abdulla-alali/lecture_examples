@@ -1,4 +1,4 @@
-package qa.edu.qu.cse.cmps497.location;
+package qa.edu.qu.cse.cmps312.location;
 
 import android.Manifest;
 import android.content.Intent;
