@@ -8,4 +8,5 @@
     <string name="longitude">Longitude:</string>
     <string name="latitude">Latitude:</string>
     <string name="play_services_not_installed">Google play services are not installed or not updated</string>
+    <string name="must_accept">Sorry, you have to accept this permission</string>
 </resources>

@@ -28,7 +28,8 @@ public class LocationManagerActivity extends AppCompatActivity {
 
     //workaround for bug with LocationManager's "locations" getTime() function
     //You must find your own skew from Logcat if you want to use the emulator
-    private static final long SKEW = 21601345L;
+    //Some emulator instances don't have that bug, so keep as 0 first
+    private static final long SKEW = 0L;
 
     // Views for display location information
     private TextView mAccuracyView;
@@ -86,24 +87,25 @@ public class LocationManagerActivity extends AppCompatActivity {
 
                 // Determine whether new location is better than current best
                 // estimate
+                try {
+                    Log.d(TAG, "Skew is: " + (System.currentTimeMillis() - location.getTime()));
+                    Log.d(TAG, "Provider is: " + location.getProvider());
+                    if (null == mBestReading
+                            || location.getAccuracy() <= mBestReading.getAccuracy()) {
 
-                Log.d(TAG, "Skew is: " + (System.currentTimeMillis() - location.getTime()));
-                Log.d(TAG, "Provider is: " + location.getProvider());
-                if (null == mBestReading
-                        || location.getAccuracy() <= mBestReading.getAccuracy()) {
+                        // Update best estimate
+                        mBestReading = location;
 
-                    // Update best estimate
-                    mBestReading = location;
+                        mBestReading.setTime(mBestReading.getTime() + SKEW);
 
-                    mBestReading.setTime(mBestReading.getTime() + SKEW);
+                        // Update display
+                        updateDisplay(location);
 
-                    // Update display
-                    updateDisplay(location);
+                        if (mBestReading.getAccuracy() < MIN_ACCURACY)
+                            mLocationManager.removeUpdates(mLocationListener);
 
-                    if (mBestReading.getAccuracy() < MIN_ACCURACY)
-                        mLocationManager.removeUpdates(mLocationListener);
-
-                }
+                    }
+                } catch (SecurityException e) {}
             }
 
             public void onStatusChanged(String provider, int status,
@@ -135,30 +137,35 @@ public class LocationManagerActivity extends AppCompatActivity {
                 - ONE_MIN) {
             Log.d(TAG, "Location needs updating");
 
-            // Register for network location updates
-            if (null != mLocationManager
-                    .getProvider(LocationManager.NETWORK_PROVIDER)) {
-                mLocationManager.requestLocationUpdates(
-                        LocationManager.NETWORK_PROVIDER, POLLING_FREQ,
-                        MIN_DISTANCE, mLocationListener);
-            }
-
-            // Register for GPS location updates
-            if (null != mLocationManager
-                    .getProvider(LocationManager.GPS_PROVIDER)) {
-                mLocationManager.requestLocationUpdates(
-                        LocationManager.GPS_PROVIDER, POLLING_FREQ,
-                        MIN_DISTANCE, mLocationListener);
-            }
-
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Log.i(TAG, "location updates cancelled");
-
-                    mLocationManager.removeUpdates(mLocationListener);
+            try {
+                // Register for network location updates
+                if (null != mLocationManager
+                        .getProvider(LocationManager.NETWORK_PROVIDER)) {
+                    mLocationManager.requestLocationUpdates(
+                            LocationManager.NETWORK_PROVIDER, POLLING_FREQ,
+                            MIN_DISTANCE, mLocationListener);
                 }
-            }, MEASURE_TIME);
+
+                // Register for GPS location updates
+                if (null != mLocationManager
+                        .getProvider(LocationManager.GPS_PROVIDER)) {
+                    mLocationManager.requestLocationUpdates(
+                            LocationManager.GPS_PROVIDER, POLLING_FREQ,
+                            MIN_DISTANCE, mLocationListener);
+                }
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.i(TAG, "location updates cancelled");
+                        try {
+                            mLocationManager.removeUpdates(mLocationListener);
+                        } catch (SecurityException e) {}
+                    }
+                }, MEASURE_TIME);
+            } catch (SecurityException e) {
+                //code should never reach here
+            }
 
         } else {
             Log.d(TAG, "Location is good enough");
@@ -170,7 +177,9 @@ public class LocationManagerActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        mLocationManager.removeUpdates(mLocationListener);
+        try {
+            mLocationManager.removeUpdates(mLocationListener);
+        } catch (SecurityException e) {}
 
     }
 
@@ -189,21 +198,25 @@ public class LocationManagerActivity extends AppCompatActivity {
 
         for (String provider : matchingProviders) {
 
-            Location location = mLocationManager.getLastKnownLocation(provider);
+            try {
+                Location location = mLocationManager.getLastKnownLocation(provider);
 
-            if (location != null) {
+                if (location != null) {
 
-                location.setTime(location.getTime() + SKEW);
-                float accuracy = location.getAccuracy();
-                long time = location.getTime();
+                    location.setTime(location.getTime() + SKEW);
+                    float accuracy = location.getAccuracy();
+                    long time = location.getTime();
 
-                if (accuracy < bestAccuracy) {
+                    if (accuracy < bestAccuracy) {
 
-                    bestResult = location;
-                    bestAccuracy = accuracy;
-                    bestAge = time;
+                        bestResult = location;
+                        bestAccuracy = accuracy;
+                        bestAge = time;
 
+                    }
                 }
+            } catch (SecurityException e) {
+
             }
         }
 
